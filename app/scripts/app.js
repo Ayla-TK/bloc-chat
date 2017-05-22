@@ -1,12 +1,29 @@
-$stateProvider
-  .state('main', {
-  url: '/',
-})
+(function() {
+    function config($locationProvider, $stateProvider) {
+        $locationProvider
+            .html5Mode({
+                enabled: true,
+                requireBase: false
+            });
         
-  angular
-    .module('blocChat',['ui.router'], ['firebase'])
-    .config(config);
+        $stateProvider
+            .state('home', {
+                url: '/',
+                controller: 'HomeCtrl as home',
+                templateUrl: '/templates/home.html'
+            })
+            .state('rooms', {
+                url: '/rooms',
+                controller: 'RoomCtrl as rooms',
+                templateUrl: '/templates/room.html',
+            });
+    }
+    
+    angular
+        .module('blocChat', ['ui.router', 'firebase'])
+        .config(config);
+})();
 
- })();
+
 
 
