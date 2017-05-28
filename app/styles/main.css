@@ -1,0 +1,81 @@
+/*General*/
+
+html {
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+/*Sidebar*/
+
+.sidebar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 25%;
+    height: 100%;
+    background-color: lightblue;
+    z-index: 1;
+}
+
+.sidebar-header {
+    padding-left: 10px;
+    margin-bottom: 5px;
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sidebar-header .rooms-list {
+    margin: 0 5px;
+}
+
+.sidebar-header .new-button {
+   margin: 0 5px;
+   padding: 8px 20px;
+   border-radius: 12px;
+   color: slategrey;
+   border: none;
+   background-color: white
+}
+
+.sidebar-title {
+    display: inline-block;
+    padding-right: 15px;
+    color: white;
+    font-family: sans-serif
+}
+
+.sidebar .room-name {
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    color: white;
+    font-family: sans-serif
+}
+
+.sidebar .room-name:hover {
+    cursor: pointer;
+}
+
+
+/*Modal*/
+
+
+.modal {
+    display: block;
+}
+.modal-body:before,
+.modal-body:after {
+    display: table;
+    content: " ";
+}
+.modal-header:before,
+.modal-header:after {
+    display: table;
+    content: " ";
+}

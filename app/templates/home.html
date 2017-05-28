@@ -1,8 +1,13 @@
-<section class="hero-content">
-    <h1 class="hero-title" ui-sref="rooms">{{ home.heroTitle }}</h1>
-</section>
-<section class="rooms-list">
+<div class="sidebar">
+   <div class="sidebar-header" ng-controller='ModalCtrl as modals'> 
+      <h1 class="sidebar-title" ui-sref="rooms">{{ home.heroTitle }}</h1>
+      <button type="button" class="new-button" ng-click="modals.open()">New Room</button>
+   </div>
+
+  <div class="rooms-list">
 		<div ng-repeat="room in home.chatRooms" class="chatrooms">
-        {{room.$value}}
+          <p class="room-name">{{room.$value}}</p>
 		</div>
-	</section>
+	</div>
+
+</div>
