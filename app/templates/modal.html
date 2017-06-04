@@ -1,13 +1,19 @@
-<section class="modal-box">
+<div class="modal-box">
     <div class="modal-header">
         <h3 class="modal-title">Create new room</h3>
     </div>
     <div class="modal-body">
         <h5 class="modal-prompt">Enter a room name</h5>
-            <input type="text" name="input">
+        <form ng-submit="modal.create()">
+          <div class="input-group animated">
+            <input type="text" class="form-control finderBar" ng-model="modal.name">
+        
+          </div>
+        </form>
     </div>
     <div class="modal-footer">
         <button class="btn-cancel" type="button" ng-click="modalInstance.cancel()">Cancel</button>
+        <button class="btn btn-primary" type="button" ng-click="modalInstance.create()">Create</button>
        
     </div>
-</section>
+</div>

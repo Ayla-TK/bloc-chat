@@ -4,23 +4,21 @@
     var ref = firebase.database().ref().child("Rooms");
     var rooms = $firebaseArray(ref);
 
-    Room.all = rooms;
+   
+    Room.all = rooms; 
     
-    Room.add = function(room) {
-        var list = $firebaseArray(ref);
-        list.$add({ foo: "bar" }).then(function(ref) {
-          var id = ref.key;
-          console.log("added record with id " + id);
-          list.$indexFor(id); // returns location in the array
+    Room.create = function(newRoom) {
+        rooms.$add({ Room: "this.room" }).then(function(ref) {
+        console.log(ref);
+        
         });
     }
-
-    return Room;
-  }
-
+  
+  return Room;
+}
   
 
-  angular
+angular
     .module('blocChat')
     .factory('Room', ['$firebaseArray', Room]);
 })();
