@@ -8,7 +8,7 @@
     Room.all = rooms; 
     
     Room.create = function(newRoom) {
-        rooms.$add({ Room: "this.room" }).then(function(ref) {
+        rooms.$add(newRoom).then(function(ref) {
         console.log(ref);
         
         });

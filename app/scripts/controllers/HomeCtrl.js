@@ -1,6 +1,6 @@
 (function() {
     function HomeCtrl(Room, $uibModal) {
-        this.heroTitle = "Let's Chat!";
+        this.heroTitle = "Chat like it's 1999!";
         this.chatRooms = Room.all;
       
        
