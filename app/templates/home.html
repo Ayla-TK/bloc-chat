@@ -1,13 +1,25 @@
 <div class="sidebar">
    <div class="sidebar-header" ng-controller='ModalCtrl as modals'> 
       <h1 class="sidebar-title" ui-sref="rooms">{{ home.heroTitle }}</h1>
-      <button type="button" class="new-button" ng-click="modals.open()">New Room</button>
+     <p>
+      <button type="button" class="new-button" ng-click="modals.open()">New Room</button></p>
    </div>
 
   <div class="rooms-list">
 		<div ng-repeat="room in home.chatRooms" class="chatrooms">
-          <p class="room-name">{{room.$value}}</p>
+          <p class="room-name" ng-click="home.setCurrentRoom(room)">{{room.$value}}</p>
 		</div>
 	</div>
+ 
+<div class="messages">
+    <div class="messages-header">
+        <h3>{{ home.currentRoom.name }}</h3>
+    </div>
+    <div class="messages-body" ng-repeat="message in home.messages">
+        <div class="username">{{ message.username }}</div>
+        <div class="timestamp">{{ message.sentAt | date : "shortTime" }}</div>
+        <div class="user-message">{{ message.content }}</div>
+    </div>
    
+</div>
 </div>

@@ -11,12 +11,8 @@
                 url: '/',
                 controller: 'HomeCtrl as home',
                 templateUrl: '/templates/home.html'
-            })
-            .state('rooms', {
-                url: '/rooms',
-                controller: 'RoomCtrl as rooms',
-                templateUrl: '/templates/room.html',
             });
+            
     }
     
     angular

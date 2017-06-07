@@ -16,7 +16,7 @@ body {
     position: fixed;
     top: 0px;
     left: 0px;
-    width: 25%;
+    width: 30%;
     height: 100%;
     background-color: lightblue;
     z-index: 1;
@@ -37,7 +37,7 @@ body {
 .sidebar-header .new-button {
    margin: 0 5px;
    padding: 8px 20px;
-   border-radius: 12px;
+   border-radius: 10px;
    color: slategrey;
    border: none;
    background-color: white
@@ -47,7 +47,9 @@ body {
     display: inline-block;
     padding-right: 15px;
     color: white;
-    font-family: sans-serif
+    font-family: sans-serif;
+    font-size: 20px
+
 }
 
 .sidebar .room-name {
@@ -79,4 +81,51 @@ body {
 .modal-header:after {
     display: table;
     content: " ";
+}
+
+/*Messages*/
+
+.messages {
+    position: fixed;
+    top: 0px;
+    left: 250px;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+    overflow: scroll;
+}
+
+
+.messages-body {
+    padding-right: 10px;
+}
+
+.messages-body .username {
+    font-weight: bold;
+}
+
+.messages-body .timestamp {
+    float: right;
+    padding-right: 100px;
+}
+
+.messages-body .username .timestamp {
+    display: inline-block;
+}
+
+.messages-body .user-message {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.message-field {
+    bottom: 0;
+    padding-bottom: 5px;
+    position: fixed;
+}
+
+.message-box {
+    width: 800px;
 }
