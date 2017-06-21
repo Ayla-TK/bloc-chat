@@ -5,6 +5,7 @@
             var modalInstance = $uibModal.open({
                 templateUrl: '/templates/modal.html',
                 controller: 'ModalInstanceCtrl as modalInstance'
+            
             })
             
             console.log('modal opened')
@@ -17,10 +18,7 @@
         })   
       }
       
-      this.createUsername = function () {
-            $cookies.put('blocChatCurrentUser', this.username);
-            $uibModal.close(this.username);
-        }  
+      
     }
     angular
         .module('blocChat')
